@@ -33,13 +33,26 @@ nav {
   color: rgb(148, 123, 117);
   text-decoration: none;
   display: inline-block;
+  transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
 }
 .enlacesclass li a:hover {
   color: brown;
   background-color: lightpink;
   border-radius: 10%;
+  animation: tenue 2s ease infinite;
 }
 
+@keyframes tenue {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-30px);
+  }
+}
 .container {
   text-align: center;
 }
@@ -74,40 +87,25 @@ h1 {
   font-family: "DM Sans", sans-serif;
 }
 
-.galletaprin {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-.galletaprin img {
-  width: 15rem;
-  display: inline-block;
-  border-radius: 10%;
-}
-
-.regalosprin {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-.regalosprin img {
-  width: 15rem;
-  height: 15rem;
-  display: inline-block;
-  border-radius: 10%;
-  position: relative;
-  text-align: center;
-}
-
+.galletaprin,
+.regalosprin,
 .tortaprin {
   position: relative;
   display: inline-block;
   text-align: center;
 }
+.galletaprin img,
+.regalosprin img,
 .tortaprin img {
   width: 15rem;
   display: inline-block;
   border-radius: 10%;
+  transition: transform 0.3s ease;
+}
+.galletaprin img:hover,
+.regalosprin img:hover,
+.tortaprin img:hover {
+  transform: scale(1.2);
 }
 
 .galletas-pages {
@@ -324,7 +322,7 @@ h1 {
     width: 5rem;
     border-radius: 10%;
   }
-  .mapa {
+  .g .mapa {
     border-radius: 10%;
   }
   .dueña {
@@ -335,7 +333,7 @@ h1 {
     max-height: 20px;
   }
 }
-@media only screen and (min-width: 300px) and (max-width: 414px){
+@media only screen and (min-width: 300px) and (max-width: 414px) and (min-width: 300px) and (max-width: 414px) {
   * {
     margin: 0;
     padding: 0;
