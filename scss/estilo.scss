@@ -73,7 +73,7 @@
   
   .productos-principales {
     margin: 20px;
-    padding: 30px;
+    padding: 20px;
   
     div {
       display: inline-block;
@@ -86,13 +86,31 @@
   .titps {
     font-family: 'BenchNine', sans-serif;
   }
+  .galletaprindiv,
+  .tortaprindiv,
+  .regalosprindiv {
+    position: relative;
+    text-align: center;
+    display: inline;
+    transition: transform 0.3s ease;
+    &:hover{
+      transform: scale(1.1);
+    }
+  
+    img {
+      width: 15rem;
+      display: inline-block;
+      border-radius: 10%;
+      transition: transform 0.3s ease;
+      }
+    }
   
   .galletaprin,
 .regalosprin,
 .tortaprin {
   position: relative;
-  display: inline-block;
   text-align: center;
+  display: inline;
   transition: transform 0.3s ease;
   &:hover{
     transform: scale(1.1);
@@ -193,14 +211,14 @@
   }
   
   .sobre-nosotrosdiv {
-    float: left;
+    display: flex;
     margin: 10px;
-  }
-  
-  .sobrenostext {
-    font-family: 'BenchNine', sans-serif;
-    overflow: auto;
-    display: inline-block;
+    .sobrenostext {
+      font-family: 'BenchNine', sans-serif;
+      padding-left: 20px;
+      padding-top: 150px;
+      
+    }
   }
   
   .dueña {
@@ -279,7 +297,7 @@
     }
   }
   
-  @media only screen and (min-width: 300px) and (max-width: 414px) {
+  @media only screen and (min-width: 300px) and (max-width: 450px) {
     * {
       margin: 0;
       padding: 0;
@@ -289,9 +307,23 @@
     .productos-principales div {
       display: inline-block;
       text-align: center;
-      margin: 1px;
+      margin: 6px;
       font-family: 'BenchNine', sans-serif;
     }
+    .galletaprindiv,
+  .tortaprindiv,
+  .regalosprindiv{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+    img {
+      width: 5.2rem;
+      display: inline-block;
+      border-radius: 10%;
+    }
+  }
+ 
   
     .galletaprin,
     .regalosprin,
@@ -299,9 +331,11 @@
       position: relative;
       display: inline-block;
       text-align: center;
+      padding-top: 150px;
+      padding-bottom: 150px;
   
       img {
-        width: 5rem;
+        width: 5.2rem;
         display: inline-block;
         border-radius: 10%;
       }
@@ -321,6 +355,7 @@
       text-align: center;
       margin: 3px;
       font-family: 'BenchNine', sans-serif;
+      white-space: nowrap;
       max-width: 80px;
     }
   
@@ -348,9 +383,12 @@
     .monstruo-de-nutella-de-4,
     .heart-cookie-cake,
     .galleta-flor-gigante {
+      display: inline-block;
       width: 5rem;
       border-radius: 10%;
+      
     }
+
 .g
   
     .mapa {
@@ -360,6 +398,16 @@
     .dueña {
       width: 22.8rem;
       border-radius: 5%;
+    }
+    .sobre-nosotrosdiv {
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      
+      .sobrenostext {
+        font-family: 'BenchNine', sans-serif;
+        
+      }
     }
   
     .footer {
