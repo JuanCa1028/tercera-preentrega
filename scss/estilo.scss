@@ -95,41 +95,56 @@
     img {
       width: 15rem;
       display: inline-block;
+      border: solid 3px #6f463f ;
       border-radius: 10%;
       transition: transform 0.3s ease;
       }
+      .centrado {
+        position: absolute;
+        opacity: 85%;
+        border-radius: 10%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        pointer-events: none;
+        font-family: 'Montserrat', sans-serif;
+      }
     }
-  
-  .galletaprin,
-.regalosprin,
-.tortaprin {
-  position: relative;
-  text-align: center;
-  display: inline;
-  transition: transform 0.3s ease;
-  &:hover{
-    transform: scale(1.1);
-  }
-
-  img {
-    width: 15rem;
-    display: inline-block;
-    border-radius: 10%;
-    transition: transform 0.3s ease;
+    .galletaprin,
+    .regalosprin,
+    .tortaprin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative; 
+      margin: 10px;
+      transition: transform 0.3s ease;
+    
+      &:hover {
+        transform: scale(1.1);
+      }
+    
+      img {
+        width: 100%;
+        max-width: 15rem;
+        border-radius: 10%;
+        border: solid 3px #6f463f ;
+        transition: transform 0.3s ease;
+      }
+    
+      .centrado {
+        position: absolute;
+        opacity: 85%;
+        border-radius: 10%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        pointer-events: none;
+        font-family: 'Montserrat', sans-serif;
+      }
     }
-  }
-
-.centrado {
-  position: absolute;
-  opacity: 85%;
-  border-radius: 10%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  font-family: 'Montserrat', sans-serif;
-}
-
   
   .galletas-pages {
     margin: 20px;
@@ -162,6 +177,7 @@
   .torta-galleta-grande {
     width: 18rem;
     border-radius: 10%;
+    border: solid 2px #6f463f ;
   }
   
   .caja-de-10-galletas-div,
@@ -190,6 +206,15 @@
   .torta-galleta-peque {
     width: 18rem;
     border-radius: 10%;
+    border: solid 2px #6f463f ;
+  }
+  .galleta-individual,
+  .caja3galletas,
+  .caja6galletas,
+  .caja10corazones {
+    width: 18rem;
+    border-radius: 10%;
+    border: solid 2px #6f463f ;
   }
     iframe {
       all: initial;
@@ -258,18 +283,11 @@
       margin: 10px;
       font-family: 'Montserrat', sans-serif;
       transition: transform 0.3s ease-in;
+      
     &:hover{
       transform: scale(1.03);
     }
     }
-  }
-  
-  .galleta-individual,
-  .caja3galletas,
-  .caja6galletas,
-  .caja10corazones {
-    width: 18rem;
-    border-radius: 10%;
   }
   
   .footer {
@@ -298,7 +316,7 @@
     }
   }
   
-  @media only screen and (min-width: 360px) and (max-width: 400px) {
+  @media only screen and (min-width: 330px) and (max-width: 420px) {
     * {
       margin: 0;
       padding: 0;
